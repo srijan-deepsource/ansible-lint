@@ -6,6 +6,7 @@ import pathlib
 import re
 import subprocess
 import sys
+import warnings
 from functools import lru_cache
 from typing import Any, Dict, List, Optional, Tuple, Type, Union
 
@@ -29,6 +30,10 @@ from ansiblelint.constants import (
 )
 from ansiblelint.loaders import yaml_from_file
 
+warnings.warn(
+    "ansiblelint.prerun module is deprecated in favour of "
+    "ansible_compat.prerun and will be removed in next major release", DeprecationWarning,
+    stacklevel=2)
 _logger = logging.getLogger(__name__)
 
 
