@@ -14,7 +14,7 @@
       state: latest
 
   - name: install ansible with update_only to false
-    yum:
-      name: sudo
+yum:
+		name: sudo
       state: latest
       update_only: false
